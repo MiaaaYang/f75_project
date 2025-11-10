@@ -1,0 +1,49 @@
+---
+title: "DATA550 Midterm Project"
+author: "Naziza Bhuiyan, Rou-zhen Chen, Mia Yang, David Kang"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: TRUE
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  warning = FALSE,
+  message = FALSE
+  )
+```
+
+```{r, load-packages}
+
+```
+
+## 1. Introduction
+
+### 1.1 Description of Dataset
+
+### 1.2 Analytical Objectives
+
+### 1.3 Reading in Clean Dataset
+
+```{r, import-dataset}
+
+```
+
+## 2. Descriptive Statistics
+
+### 2.1 Tabular Analysis
+
+#### Table 1: 
+
+### 2.2 Graphical Analysis
+
+#### Figure 1:
+
+## 3. Regression Analysis
+
+### 3.1 [insert regression type]
+
+#### Table 2:
+
