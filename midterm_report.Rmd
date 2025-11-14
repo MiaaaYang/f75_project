@@ -28,7 +28,9 @@ knitr::opts_chunk$set(
 ### 1.3 Reading in Clean Dataset
 
 ```{r, import-dataset}
-
+data <- readRDS(
+  file = here::here("f75_dataset", "f75_clean.RDS")
+)
 ```
 
 ## 2. Descriptive Statistics
