@@ -7,7 +7,7 @@ f75$final_status <- ifelse(f75$discharged2 == "Yes", 1,
                             ifelse(f75$discharged2 == "No" & f75$withdraw2 == "died", 0,
                                    ifelse(f75$discharged2 == "No" & is.na(f75$withdraw2),"", 1)))
 #Weight:categorized the groups (2 group)
-median_wt <- median(f75$weight, na.rm = TRUE) #Meidan:6.5
+median_wt <- median(f75$weight, na.rm = TRUE) #Median:6.5
 
 f75$weight_group <- ifelse(f75$weight <= median_wt, 0, 1) # 0:<6.5kg, 1:>6.5kg
 
@@ -38,13 +38,13 @@ f75$kwas_new <- ifelse(f75$kwas== "No", 0, 1)
 f75$diarrhoea_new <- ifelse(f75$diarrhoea== "No", 0, 1) 
 #arm, Standard F75=0, Modified F75 (intervention)=1
 f75$arm_new <- ifelse(f75$arm=="Standard F75",0,1)
-#keep necessary variables in a new ad clean dataset
+#keep necessary variables in a new and clean dataset
 f75_clean <- f75[, c("subjid", "site", "agemons", "age_tertile", "sex_group", "caregiver",
                      "other_carer", "bfeeding", "muac", "weight", "weight_group",
                      "height", "hmeasure", "final_status","diarrhoea_new",
                      "oedema_new", "hiv_new",
                      "kwas_new", "arm_new")]
-saveRDS(f75_clean, file = here::here("f75_dataset", "f75_clean.RDS"))
+saveRDS(f75_clean, file = here::here("output", "f75_clean.rds"))
 
 
 
